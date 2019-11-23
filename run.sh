@@ -43,4 +43,6 @@ docker run --rm -it -e DISPLAY=$DISPLAY \
     -v $clion:/home/andrei/.CLion2019.2 \
     -v $java:/home/andrei/.java \
     -v $projects:/home/andrei/CLionProjects \
+    --env _JAVA_AWT_WM_NONREPARENTING=1 \
+    --env AWT_TOOLKIT=MToolkit \
     clion-docker:latest
