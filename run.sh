@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cache="/home/andrei/dockerbuilds/clion-docker/.cache"
-clion="/home/andrei/dockerbuilds/clion-docker/.CLion2019.2"
+clion="/home/andrei/dockerbuilds/clion-docker/.CLion2019.3"
 java="/home/andrei/dockerbuilds/clion-docker/.java"
 projects="/home/andrei/CLionProjects"
 
@@ -40,7 +40,7 @@ fi
 docker run --rm -it -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v $cache:/home/andrei/.cache \
-    -v $clion:/home/andrei/.CLion2019.2 \
+    -v $clion:/home/andrei/.CLion2019.3 \
     -v $java:/home/andrei/.java \
     -v $projects:/home/andrei/CLionProjects \
     --env _JAVA_AWT_WM_NONREPARENTING=1 \
