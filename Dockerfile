@@ -15,9 +15,9 @@ RUN update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 50 && \
     update-alternatives --set cpp-bin /usr/bin/cpp-8 && \
     update-alternatives --install /usr/bin/cc cc /usr/bin/gcc-8 50
 
-RUN wget https://download.jetbrains.com/cpp/CLion-2019.3.tar.gz -O /tmp/CLion-2019.3.tar.gz && \
+RUN wget https://download.jetbrains.com/cpp/CLion-2019.3.1.tar.gz -O /tmp/CLion-2019.3.1.tar.gz && \
     mkdir /app && \
-    cd /app && tar -xvf /tmp/CLion-2019.3.tar.gz && \
+    cd /app && tar -xvf /tmp/CLion-2019.3.1.tar.gz && \
     mv "/app/`ls /app`" /app/clion
 
 RUN apt update && \
