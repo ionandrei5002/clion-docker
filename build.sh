@@ -1,3 +1,8 @@
 #!/bin/bash
 
-docker build --rm -f "Dockerfile" -t clion-docker:latest .
+username=$(whoami)
+
+docker build \
+    --build-arg username="$username" \
+    --rm -f "Dockerfile" \
+    -t clion-docker:latest .

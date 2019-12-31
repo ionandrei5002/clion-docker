@@ -37,12 +37,13 @@ else
     echo "Directory $projects created."
 fi
 
-docker run --rm -it -e DISPLAY=$DISPLAY \
+docker run --rm -d -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v $cache:/home/andrei/.cache \
     -v $clion:/home/andrei/.CLion2019.3 \
     -v $java:/home/andrei/.java \
     -v $projects:/home/andrei/CLionProjects \
+    -p 8000:8000 \
     --env _JAVA_AWT_WM_NONREPARENTING=1 \
     --env AWT_TOOLKIT=MToolkit \
     clion-docker:latest
